@@ -54,8 +54,8 @@ jobs:
           script: |
             docker stop prova-final
             docker rm --force prova-final
-            docker run -d -p 8080:8080\
-            -e spring_profiles_active=prod\
+            docker run -d -p 8080:8080 \
+            -e spring_profiles_active=prod \
             -e MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD}} \
             -e MYSQL_HOST=mysql \
             -e MOVIMENTACAO_URL=http://15.228.236.37:8081 \
